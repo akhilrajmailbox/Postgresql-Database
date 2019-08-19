@@ -3,23 +3,24 @@
 
 ## Docs links
 
-[master slave configuration]()
+[master slave configuration](https://github.com/akhilrajmailbox/Postgresql-Database/blob/master/postgresql-master-slave-replication.pdf)
 
-[postgresql cluster configuration]()
+[postgresql cluster configuration](https://github.com/akhilrajmailbox/Postgresql-Database/tree/master/postgresql-cluster)
 
 
 ## Cluster Scripts
 
 
-[remote server script]()
+[remote server script](https://raw.githubusercontent.com/akhilrajmailbox/Postgresql-Database/master/scripts/remote.sh)
 
-[remote server failover]()
+[remote server failover](https://raw.githubusercontent.com/akhilrajmailbox/Postgresql-Database/master/scripts/remotefail.sh)
 
 
+```
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                Postgresql query
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+```
 
 ## for get into db (postgres is default user)
 
@@ -95,7 +96,9 @@ or
 SELECT table_schema,table_name FROM information_schema.tables ORDER BY table_schema,table_name;
 ```
 
+```
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+```
 
 error:::::
 
