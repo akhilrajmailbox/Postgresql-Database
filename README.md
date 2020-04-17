@@ -90,6 +90,48 @@ or
 \connect database_name username
 ```
 
+
+## Readonly user configuration
+```
+\c databasename;
+CREATE USER username WITH PASSWORD 'your_password';
+GRANT CONNECT ON DATABASE database_name TO username;
+GRANT USAGE ON SCHEMA schema_name TO username;
+GRANT SELECT ON ALL TABLES IN SCHEMA schema_name TO username;
+```
+
+## connect to Database Server
+```
+psql -h datamall-dev.postgres.database.azure.com -U USER_NAME@SERVER_NAME --dbname=postgres
+```
+
+## Create Users and databases for each modules
+
+### Users
+```
+CREATE USER module1 WITH PASSWORD 'UNIQUE_PASSWORD';
+CREATE USER module2 WITH PASSWORD 'UNIQUE_PASSWORD';
+```
+
+### databases
+```
+CREATE DATABASE db_module1;
+CREATE DATABASE db_module2;
+```
+
+### revoke the default access cpnnect permission for the databases
+```
+REVOKE connect ON DATABASE db_module1 FROM PUBLIC;
+REVOKE connect ON DATABASE db_module2 FROM PUBLIC;
+```
+
+## Grant permission
+```
+GRANT ALL PRIVILEGES ON DATABASE db_module1 to module1;
+GRANT ALL PRIVILEGES ON DATABASE db_module2 to module2;
+```
+
+
 ## This lists tables in the current database
 
 ```
